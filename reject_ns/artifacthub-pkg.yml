@@ -1,0 +1,30 @@
+---
+###
+### Use `make artifacthub-pkg.yml` to auto-generate this file
+### See docs.kubewarden.io for publishing to ArtifactHub
+###
+version: 0.1.0
+name: reject-default-ns
+displayName: Reject Default Namespace
+createdAt: '2023-07-27T12:41:10+02:00'
+description: Rejects the Pods that have the namespace default
+license: Apache-2.0
+homeURL: https://author1.website
+containersImages:
+- name: policy
+  image: "ghcr.io/kubewarden/policies/demo:v0.1.0"
+keywords:
+- this is freeform
+links:
+- name: policy
+  url: https://github.com/yourorg/demo/releases/download/v0.1.0/policy.wasm
+- name: source
+  url: POLICY HOMEPAGE URL
+provider:
+  name: kubewarden
+recommendations:
+- url: https://artifacthub.io/packages/helm/kubewarden/kubewarden-controller
+annotations:
+  kubewarden/resources: Pod # comma separated list
+  kubewarden/mutation: false
+  kubewarden/contextAware: false
